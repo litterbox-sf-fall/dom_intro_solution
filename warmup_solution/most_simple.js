@@ -1,3 +1,4 @@
+"use strict";
 var myResults = [ {name: "six pack of beer", location: {lat: 37.767182, long: -122.5}}, 
         {name: "whacky glasses", location: {lat: 37.767182, long: -122.51}},
         {name: "whiskey bottle", location: {lat: 37.767282, long: -122.49}},
@@ -15,10 +16,10 @@ for (var i = myResults.length - 1; i >= 0; i--) {
   var distance = Math.abs(myLocation.lat - myResults[i].location.lat) + 
     Math.abs(myLocation.long-myResults[i].location.long);
 
-  locationWithDistance = {
+  var locationWithDistance = {
     "location": myResults[i].name,
     "distance": distance
-  }  
+  }; 
   sortable.push(locationWithDistance);
 }
 
