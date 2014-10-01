@@ -14,12 +14,17 @@ var sortable=[];
 for (var i = myResults.length - 1; i >= 0; i--) {
   var distance = Math.abs(myLocation.lat - myResults[i].location.lat) + 
     Math.abs(myLocation.long-myResults[i].location.long);
-  sortable.push([myResults[i].name,distance]);
+
+  locationWithDistance = {
+    "location": myResults[i].name,
+    "distance": distance
+  }  
+  sortable.push(locationWithDistance);
 }
 
 var sortedLocations = sortable.sort(function(a, b) {
-    return a[1] - b[1]
-  });
+    return a.distance - b.distance;
+});
 
 console.log(sortedLocations);
 
