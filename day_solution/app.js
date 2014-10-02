@@ -13,25 +13,27 @@ var initialize = function() {
       list_items[i].addEventListener("click", function() {
         console.log("Clicked! a list item:" + this.innerHTML);
         this.classList.add("selected");
-        switch(this.innerHTML){
-          case "Honey":
-            document.querySelector("img").setAttribute("src","./images/honey.jpeg")
-            break;
-          case "Beer":
-            document.querySelector("img").setAttribute("src","./images/beer.jpeg")
-            break;
-          case "Wine":
-            document.querySelector("img").setAttribute("src","./images/wine.jpeg")
-            break;
-          case "Water":
-            document.querySelector("img").setAttribute("src","./images/water.jpeg")
-            break;
-          case "Milk":
-            document.querySelector("img").setAttribute("src","./images/milk.jpeg")
-            break;        
-          default:
-            console.log("what?");  
-        };
+        document.querySelector("img").setAttribute("src","./images/"+this.innerHTML+".jpeg")
+        // OR with a switch, hehe
+        // switch(this.innerHTML){
+        //   case "honey":
+        //     document.querySelector("img").setAttribute("src","./images/honey.jpeg")
+        //     break;
+        //   case "beer":
+        //     document.querySelector("img").setAttribute("src","./images/beer.jpeg")
+        //     break;
+        //   case "wine":
+        //     document.querySelector("img").setAttribute("src","./images/wine.jpeg")
+        //     break;
+        //   case "water":
+        //     document.querySelector("img").setAttribute("src","./images/water.jpeg")
+        //     break;
+        //   case "milk":
+        //     document.querySelector("img").setAttribute("src","./images/milk.jpeg")
+        //     break;        
+        //   default:
+        //     console.log("what?");  
+        // };
       });
     };
   };
