@@ -10,8 +10,8 @@ var initialize = function() {
 
     for (var i = 0; i < list_items.length; i++) {
       list_items[i].style.backgroundColor = "yellow";
-      list_items[i].addEventListener("click", function() {
-        console.log("Clicked! a list item:" + this.innerHTML);
+      list_items[i].addEventListener("click", function(event) {
+        console.log("Click on list item:" + this.innerHTML + ". Event:" + event);
         this.classList.add("selected");
         document.querySelector("img").setAttribute("src","./images/"+this.innerHTML+".jpeg")
         // OR with a switch, hehe
