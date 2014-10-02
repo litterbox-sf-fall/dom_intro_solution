@@ -16,11 +16,11 @@ for (var i = myResults.length - 1; i >= 0; i--) {
   var distance = Math.abs(myLocation.lat - myResults[i].location.lat) + 
     Math.abs(myLocation.long-myResults[i].location.long);
 
-  var locationWithDistance = {
-    "location": myResults[i].name,
+  var placeWithDistance = {
+    "place": myResults[i].name,
     "distance": distance
   }; 
-  sortable.push(locationWithDistance);
+  sortable.push(placeWithDistance);
 }
 
 var sortedLocations = sortable.sort(function(a, b) {
